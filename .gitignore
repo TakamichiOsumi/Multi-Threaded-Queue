@@ -1,0 +1,7 @@
+*.o
+
+run_*
+
+GRTAGS
+GTAGS
+GPATH
