@@ -40,7 +40,7 @@ app_test_basic_queue_operations(void){
 	 fprintf(stderr, "the queue is not empty after full deque\n");
 	 exit(-1);
      }
-     
+
      if (queue_dequeue(q) != NULL){
 	 fprintf(stderr, "the queue is empty but deque returned a non-null value\n");
 	 exit(-1);
@@ -58,7 +58,7 @@ app_compare_queue_and_array(Queue *q, int **ary){
 	fprintf(stderr, "input data is missing.\n");
 	exit(-1);
     }
-    
+
     for (; i < Q_DEFAULT_SIZE; i++){
 	if (q->elem[i] != (void *) ary[i]){
 	    fprintf(stderr,
@@ -84,7 +84,7 @@ app_test_bulk_opearations(void){
     bool failed = false;
     char *status;
     uintptr_t enqueued_val, dequeued_val;
-    
+
     queue_bulk_enqueue(q, (void **) enqueue_ary);
     queue_print(q);
     dequeue_ary = (int **) queue_bulk_dequeue(q);
